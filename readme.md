@@ -1,4 +1,4 @@
-# Calculator
+# Calculator in WPF
 
 ## Purpose
 
