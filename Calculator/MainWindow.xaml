@@ -22,34 +22,31 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Label 
+            x:Name = "ResultLabel"
             Content="0"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
             FontSize="60"
             Grid.ColumnSpan="4" />
-        <Button Content="AC" Margin="5" Grid.Row="1" Grid.Column="0"/>
-        <Button Content="+/1" Margin="5" Grid.Row="1" Grid.Column="1"/>
-        <Button Content="%" Margin="5" Grid.Row="1" Grid.Column="2"/>
-        <Button Content="/" Margin="5" Grid.Row="1" Grid.Column="3"/>
-
-        <Button Content="7" Margin="5" Grid.Row="2" Grid.Column="0"/>
-        <Button Content="8" Margin="5" Grid.Row="2" Grid.Column="1"/>
-        <Button Content="9" Margin="5" Grid.Row="2" Grid.Column="2"/>
-        <Button Content="*" Margin="5" Grid.Row="2" Grid.Column="3"/>
-
-        <Button Content="4" Margin="5" Grid.Row="3" Grid.Column="0"/>
-        <Button Content="5" Margin="5" Grid.Row="3" Grid.Column="1"/>
-        <Button Content="4" Margin="5" Grid.Row="3" Grid.Column="2"/>
-        <Button Content="3" Margin="5" Grid.Row="3" Grid.Column="3"/>
-
-        <Button Content="1" Margin="5" Grid.Row="4" Grid.Column="0"/>
-        <Button Content="2" Margin="5" Grid.Row="4" Grid.Column="1"/>
-        <Button Content="3" Margin="5" Grid.Row="4" Grid.Column="2"/>
-        <Button Content="+" Margin="5" Grid.Row="4" Grid.Column="3"/>
-
-        <Button Content="0" Margin="5" Grid.Row="5" Grid.ColumnSpan="2"/>
-        <Button Content="." Margin="5" Grid.Row="5" Grid.Column="2"/>
-        <Button Content="=" Margin="5" Grid.Row="5" Grid.Column="3"/>
+        <Button x:Name = "AcButton" Content="AC" Click ="AcButtonClick" Margin="5" Grid.Row="1" Grid.Column="0"/>
+        <Button x:Name = "PlusMinusButton" Content="+/-" Click ="PlusMinusButtonClick" Margin="5" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name = "PercentButton" Content="%" Click ="PercentButtonClick" Margin="5" Grid.Row="1" Grid.Column="2"/>
+        <Button x:Name = "DivideButton" Content="/" Click ="DivideButtonClick" Margin="5"  Grid.Row="1" Grid.Column="3"/>
+        <Button x:Name = "SevenButton" Click ="SevenButtonClick" Content="7" Margin="5" Grid.Row="2" Grid.Column="0"/>
+        <Button x:Name = "EightButton" Click ="EightButtonClick" Content="8" Margin="5" Grid.Row="2" Grid.Column="1"/>
+        <Button x:Name = "NineButton" Click ="NineButtonClick" Content="9" Margin="5" Grid.Row="2" Grid.Column="2"/>
+        <Button x:Name = "MultiplyButton" Content="*" Click ="MultiplyButtonClick" Margin="5" Grid.Row="2" Grid.Column="3"/>
+        <Button x:Name = "FourButton" Click ="FourButtonClick" Content="4" Margin="5" Grid.Row="3" Grid.Column="0"/>
+        <Button x:Name = "FiveButton" Click ="FiveButtonClick" Content="5" Margin="5" Grid.Row="3" Grid.Column="1"/>
+        <Button x:Name = "SixButton" Click ="SixButtonClick" Content="6" Margin="5" Grid.Row="3" Grid.Column="2"/>
+        <Button x:Name = "MinusButton" Content="-" Click ="MinusButtonClick" Margin="5" Grid.Row="3" Grid.Column="3"/>
+        <Button x:Name = "OneButton" Click ="OneButtonClick" Content="1" Margin="5" Grid.Row="4" Grid.Column="0"/>
+        <Button x:Name = "TwoButton" Click ="TwoButtonClick" Content="2" Margin="5" Grid.Row="4" Grid.Column="1"/>
+        <Button x:Name = "ThreeButton" Click ="ThreeButtonClick" Content="3" Margin="5" Grid.Row="4" Grid.Column="2"/>
+        <Button x:Name = "PlusButton" Content="+" Click ="PlusButtonClick" Margin="5" Grid.Row="4" Grid.Column="3"/>
+        <Button x:Name = "ZeroButton" Click ="ZeroButtonClick" Content="0" Margin="5" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <Button x:Name = "PeriodButton" Content="." Click ="PeriodButtonClick" Margin="5" Grid.Row="5" Grid.Column="2"/>
+        <Button x:Name = "EqualsButton" Content="=" Click ="EqualsButtonClick" Margin="5" Grid.Row="5" Grid.Column="3"/>
 
     </Grid>
 </Window>
