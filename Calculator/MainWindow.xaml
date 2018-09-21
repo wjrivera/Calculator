@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="MainWindow" Height="525" Width="350">
+
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -26,27 +27,125 @@
             Content="0"
             HorizontalAlignment="Right"
             VerticalAlignment="Bottom"
-            FontSize="60"
             Grid.ColumnSpan="4" />
-        <Button x:Name = "AcButton" Content="AC" Click ="AcButtonClick" Margin="5" Grid.Row="1" Grid.Column="0"/>
-        <Button x:Name = "PlusMinusButton" Content="+/-" Click ="PlusMinusButtonClick" Margin="5" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name = "PercentButton" Content="%" Click ="PercentButtonClick" Margin="5" Grid.Row="1" Grid.Column="2"/>
-        <Button x:Name = "DivideButton" Content="/" Click ="OperationButtonClick" Margin="5"  Grid.Row="1" Grid.Column="3"/>
-        <Button x:Name = "SevenButton" Click ="NumberButtonClick" Content="7" Margin="5" Grid.Row="2" Grid.Column="0"/>
-        <Button x:Name = "EightButton" Click ="NumberButtonClick" Content="8" Margin="5" Grid.Row="2" Grid.Column="1"/>
-        <Button x:Name = "NineButton" Click ="NumberButtonClick" Content="9" Margin="5" Grid.Row="2" Grid.Column="2"/>
-        <Button x:Name = "MultiplyButton" Content="*" Click ="OperationButtonClick" Margin="5" Grid.Row="2" Grid.Column="3"/>
-        <Button x:Name = "FourButton" Click ="NumberButtonClick" Content="4" Margin="5" Grid.Row="3" Grid.Column="0"/>
-        <Button x:Name = "FiveButton" Click ="NumberButtonClick" Content="5" Margin="5" Grid.Row="3" Grid.Column="1"/>
-        <Button x:Name = "SixButton" Click ="NumberButtonClick" Content="6" Margin="5" Grid.Row="3" Grid.Column="2"/>
-        <Button x:Name = "MinusButton" Content="-" Click ="OperationButtonClick" Margin="5" Grid.Row="3" Grid.Column="3"/>
-        <Button x:Name = "OneButton" Click ="NumberButtonClick" Content="1" Margin="5" Grid.Row="4" Grid.Column="0"/>
-        <Button x:Name = "TwoButton" Click ="NumberButtonClick" Content="2" Margin="5" Grid.Row="4" Grid.Column="1"/>
-        <Button x:Name = "ThreeButton" Click ="NumberButtonClick" Content="3" Margin="5" Grid.Row="4" Grid.Column="2"/>
-        <Button x:Name = "PlusButton" Content="+" Click ="OperationButtonClick" Margin="5" Grid.Row="4" Grid.Column="3"/>
-        <Button x:Name = "ZeroButton" Click ="NumberButtonClick" Content="0" Margin="5" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2"/>
-        <Button x:Name = "PeriodButton" Content="." Click ="PeriodButtonClick" Margin="5" Grid.Row="5" Grid.Column="2"/>
-        <Button x:Name = "EqualsButton" Content="=" Click ="EqualsButtonClick" Margin="5" Grid.Row="5" Grid.Column="3"/>
+        <Button x:Name = "AcButton" 
+                Content="AC" 
+                Click ="AcButtonClick" 
+                Style="{StaticResource OperatorsButtonsStyle}"
+                Grid.Row="1" 
+                Grid.Column="0"/>
+        <Button x:Name = "PlusMinusButton" 
+                Content="+/-" 
+                Click ="PlusMinusButtonClick" 
+                Style="{StaticResource OperatorsButtonsStyle}"
+                Grid.Row="1" 
+                Grid.Column="1"/>
+        <Button x:Name = "PercentButton" 
+                Content="%" 
+                Click ="PercentButtonClick" 
+                Style="{StaticResource OperatorsButtonsStyle}"
+                Grid.Row="1" 
+                Grid.Column="2"/>
 
+        <!--Numbers-->
+        <Button x:Name = "ZeroButton" 
+                Click ="NumberButtonClick" 
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="0"
+                Grid.Row="5"
+                Grid.Column="0" 
+                Grid.ColumnSpan="2"/>
+        <Button x:Name = "OneButton" 
+                Click ="NumberButtonClick"
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="1" 
+                Grid.Row="4" 
+                Grid.Column="0"/>
+        <Button x:Name = "TwoButton" 
+                Click ="NumberButtonClick"
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="2" 
+                Grid.Row="4" 
+                Grid.Column="1"/>
+        <Button x:Name = "ThreeButton"
+                Click ="NumberButtonClick"
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="3" 
+                Grid.Row="4" 
+                Grid.Column="2"/>
+        <Button x:Name = "FourButton"
+                Click ="NumberButtonClick" 
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="4"
+                Grid.Row="3"
+                Grid.Column="0"/>
+        <Button x:Name = "FiveButton" 
+                Click ="NumberButtonClick" 
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="5"
+                Grid.Row="3" 
+                Grid.Column="1"/>
+        <Button x:Name = "SixButton" 
+                Click ="NumberButtonClick"
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="6" 
+                Grid.Row="3" 
+                Grid.Column="2"/>
+        <Button x:Name = "SevenButton" 
+                Click ="NumberButtonClick" 
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="7" 
+                Grid.Row="2" 
+                Grid.Column="0"/>
+        <Button x:Name = "EightButton" 
+                Click ="NumberButtonClick" 
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="8" 
+                Grid.Row="2" 
+                Grid.Column="1"/>
+        <Button x:Name = "NineButton" 
+                Click ="NumberButtonClick" 
+                Style="{StaticResource NumberButtonsStyle}"
+                Content="9" 
+                Grid.Row="2" 
+                Grid.Column="2"/>
+        <Button x:Name = "PeriodButton"
+                Content="."
+                Click ="PeriodButtonClick" 
+                Style="{StaticResource NumberButtonsStyle}"
+                Grid.Row="5" 
+                Grid.Column="2"/>
+
+        <!--Operators-->
+        <Button x:Name = "DivideButton" 
+                Content="/" 
+                Click ="OperationButtonClick" 
+                Style="{StaticResource OperatorsButtonsStyle}"
+                Grid.Row="1" 
+                Grid.Column="3"/>
+        <Button x:Name = "MultiplyButton" 
+                Content="*"
+                Click ="OperationButtonClick"
+                Style="{StaticResource OperatorsButtonsStyle}"
+                Grid.Row="2" 
+                Grid.Column="3"/>
+        <Button x:Name = "MinusButton" 
+                Content="-"
+                Click ="OperationButtonClick"
+                Style="{StaticResource OperatorsButtonsStyle}"
+                Grid.Row="3" 
+                Grid.Column="3"/>
+        <Button x:Name = "PlusButton" 
+                Content="+" 
+                Click ="OperationButtonClick" 
+                Style="{StaticResource OperatorsButtonsStyle}"
+                Grid.Row="4" 
+                Grid.Column="3"/>
+        <Button x:Name = "EqualsButton" 
+                Content="=" 
+                Click ="EqualsButtonClick" 
+                Style="{StaticResource OperatorsButtonsStyle}"
+                Grid.Row="5" 
+                Grid.Column="3"/>
     </Grid>
 </Window>

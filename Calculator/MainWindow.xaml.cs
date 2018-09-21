@@ -197,8 +197,15 @@ namespace Calculator
         }
         public static double Divide(double n1, double n2)
         {
-            var result = Math.Abs(n2) < 0.00001 ? 0 : n1 / n2;
-            return result;
+            if (Math.Abs(n2) < 0.00001)
+            {
+                MessageBox.Show("Division by 0 is not supported", 
+                    "Wrong Operations", 
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                return 0;
+            }
+            return n1 / n2;
         }
     }
 }
