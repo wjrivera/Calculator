@@ -17,3 +17,4 @@ Learning how to make a calculator using WPF
 
 * **William Rivera**
 
+[![Run on Repl.it](https://repl.it/badge/github/wjrivera/Calculator)](https://repl.it/github/wjrivera/Calculator)
